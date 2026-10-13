@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "productId": "paperclip-solo-builder-kit",
+  "sourceRevision": "e5b5bbde1e7a88d8",
+  "importChecks": [
+    {
+      "id": "actual_import",
+      "passed": true
+    },
+    {
+      "id": "three_roles",
+      "passed": true
+    },
+    {
+      "id": "loaded_instructions",
+      "passed": true
+    },
+    {
+      "id": "reporting_chain",
+      "passed": true
+    },
+    {
+      "id": "codex_adapters",
+      "passed": true
+    },
+    {
+      "id": "disabled_schedules",
+      "passed": true
+    }
+  ],
+  "referenceVerified": true,
+  "testsRun": 10,
+  "trustedAcceptanceUnchanged": true,
+  "implementationSha256": "2a883abd1cd3ef6dfb10a131ea7fcb656cf83633ef7c0a819cf9604351891cb3",
+  "roles": [
+    {
+      "role": "director",
+      "instructionsSha256": "9415b3d414c27d73ea1e6b003f35b475a75bb361d44ad837fa4a53c95d0e0498"
+    },
+    {
+      "role": "manager",
+      "instructionsSha256": "86eece0b21643d19b7336bca339b9cd0696abad18a9a409a1447573529a2840c"
+    },
+    {
+      "role": "builder",
+      "instructionsSha256": "b29a04f75560b2eae49dca280d093c621f913332e951f71632d6a5c2591bea69"
+    }
+  ],
+  "cases": [
+    {
+      "name": "test_default_all",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[{\"id\": 9, \"title\": \"A\", \"status\": \"open\"}, {\"id\": 2, \"title\": \"B\", \"status\": \"done\"}, {\"id\": 5, \"title\": \"C\", \"status\": \"open\"}, {\"id\": 1, \"title\": \"D\", \"status\": \"done\"}]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_done",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[{\"id\": 2, \"title\": \"B\", \"status\": \"done\"}, {\"id\": 1, \"title\": \"D\", \"status\": \"done\"}]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_empty_all",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_empty_default",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_empty_done",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_empty_open",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_explicit_all",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[{\"id\": 9, \"title\": \"A\", \"status\": \"open\"}, {\"id\": 2, \"title\": \"B\", \"status\": \"done\"}, {\"id\": 5, \"title\": \"C\", \"status\": \"open\"}, {\"id\": 1, \"title\": \"D\", \"status\": \"done\"}]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_invalid_status",
+      "verdict": "pass",
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: todo.py [-h] [--status {open,done,all}] input\ntodo.py: error: argument --status: invalid choice: 'pending' (choose from 'open', 'done', 'all')\n"
+    },
+    {
+      "name": "test_open",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[{\"id\": 9, \"title\": \"A\", \"status\": \"open\"}, {\"id\": 5, \"title\": \"C\", \"status\": \"open\"}]\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_stable_order",
+      "verdict": "pass",
+      "exitCode": 0,
+      "stdout": "[{\"id\": 5, \"title\": \"C\", \"status\": \"open\"}, {\"id\": 9, \"title\": \"A\", \"status\": \"open\"}]\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Recorded synthetic reference performed through host-assigned model jobs using imported role instructions. Not a customer installation or arbitrary-repository guarantee."
+}
